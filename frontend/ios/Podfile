@@ -17,7 +17,9 @@ target 'cointrackerfrontend' do
     :hermes_enabled => false
   )
 
-  target 'cointrackerfrontendTests' do
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  target 'cointrackerfrontendTests' doDONT_AUTOINSTALL_REANIMATED
     inherit! :complete
     # Pods for testing
   end

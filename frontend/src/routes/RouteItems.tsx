@@ -1,0 +1,102 @@
+import React, {ReactComponentElement} from 'react';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+
+export type Screens = {
+  [key: string]: string;
+};
+
+export type Route = {
+  name: string;
+  focusedRoute: keyof Screens;
+  title: string;
+  showInTab: boolean;
+  showInDrawer: boolean;
+  icon: (focused: boolean) => ReactComponentElement<typeof Icon>;
+};
+
+export const screens: Screens = {
+  HomeTab: 'HomeTab',
+
+  HomeStack: 'HomeStack',
+  Home: 'Home',
+  SubscriptionStack: 'SubscriptionStack',
+  Subscription: 'Subscription',
+  PortfolioStack: 'PortfolioStack',
+  Portfolio: 'Portfolio',
+};
+
+const focusOptions = (focused: boolean) => {
+  return {
+    size: focused ? 25 : 30,
+    color: focused ? '#000' : '#555',
+    [focused ? 'light' : 'solid']: true,
+  };
+};
+
+export const routes: Array<Route> = [
+  {
+    name: screens.HomeTab,
+    focusedRoute: screens.HomeTab,
+    title: 'Home',
+    showInTab: false,
+    showInDrawer: false,
+    icon: (focused: boolean) => <Icon name="home" {...focusOptions(focused)} />,
+  },
+
+  {
+    name: screens.HomeStack,
+    focusedRoute: screens.HomeStack,
+    title: 'Home',
+    showInTab: true,
+    showInDrawer: true,
+    icon: (focused: boolean) => <Icon name="home" {...focusOptions(focused)} />,
+  },
+  {
+    name: screens.Home,
+    focusedRoute: screens.HomeStack,
+    title: 'Home',
+    showInTab: true,
+    showInDrawer: false,
+    icon: (focused: boolean) => <Icon name="home" {...focusOptions(focused)} />,
+  },
+  {
+    name: screens.SubscriptionStack,
+    focusedRoute: screens.SubscriptionStack,
+    title: 'Subscription',
+    showInTab: true,
+    showInDrawer: true,
+    icon: (focused: boolean) => (
+      <Icon name="star" solid {...focusOptions(focused)} />
+    ),
+  },
+  {
+    name: screens.Subscription,
+    focusedRoute: screens.SubscriptionStack,
+    title: 'Subscription',
+    showInTab: true,
+    showInDrawer: false,
+    icon: (focused: boolean) => (
+      <Icon name="star" solid {...focusOptions(focused)} />
+    ),
+  },
+  {
+    name: screens.PortfolioStack,
+    focusedRoute: screens.PortfolioStack,
+    title: 'Portfolio',
+    showInTab: true,
+    showInDrawer: true,
+    icon: (focused: boolean) => (
+      <Icon name="wallet" {...focusOptions(focused)} />
+    ),
+  },
+  {
+    name: screens.Portfolio,
+    focusedRoute: screens.PortfolioStack,
+    title: 'Portfolio',
+    showInTab: true,
+    showInDrawer: false,
+    icon: (focused: boolean) => (
+      <Icon name="wallet" {...focusOptions(focused)} />
+    ),
+  },
+];

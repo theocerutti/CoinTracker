@@ -1,10 +1,12 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
-export const Authentication = (props: any) => {
+const Subscription = (props: any) => {
   return (
     <View>
-      <Text>Authentication</Text>
+      <Text>Subscription</Text>
     </View>
   );
 };
+
+export default Subscription;

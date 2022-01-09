@@ -12,5 +12,7 @@ module.exports = {
         allowUndefined: true,
       },
     ],
+    // MUST BE LISTED LAST
+    'react-native-reanimated/plugin',
   ],
 };

@@ -96,9 +96,10 @@ export const spacing = {
 
 const theme: ITheme = extendTheme({
   config: {
+    useSystemColorMode: false,
     initialColorMode: 'dark',
   },
-  colors: {
+  /*colors: {
     contrastThreshold: 7,
     // Singleton colors
     white: '#FFFFFF',
@@ -405,7 +406,7 @@ const theme: ITheme = extendTheme({
     secondary: {},
     light: {},
     tertiary: {},
-  },
+  },*/
 });
 
 export {theme};

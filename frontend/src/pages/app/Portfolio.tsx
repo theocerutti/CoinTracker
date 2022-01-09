@@ -1,10 +1,12 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
-export const Home = (props: any) => {
+const Portfolio = (props: any) => {
   return (
     <View>
-      <Text>Home</Text>
+      <Text>Portfolio</Text>
     </View>
   );
 };
+
+export default Portfolio;
