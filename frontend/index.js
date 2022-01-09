@@ -1,9 +1,6 @@
-/**
- * @format
- */
-
 import {AppRegistry} from 'react-native';
-import App from './src/App';
-import {name as appName} from './app.json';
+import RootApp from './src/App';
 
-AppRegistry.registerComponent(appName, () => App);
+const APP_KEY = 'cointrackerfrontend';
+
+AppRegistry.registerComponent(APP_KEY, () => RootApp);
