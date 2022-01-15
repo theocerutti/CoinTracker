@@ -32,7 +32,7 @@ export const screens: Screens = {
 
 const focusOptions = (focused: boolean) => {
   return {
-    size: focused ? 30 : 25,
+    size: 25,
     //[focused ? 'light' : 'solid']: true,
   };
 };
