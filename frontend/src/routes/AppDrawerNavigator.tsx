@@ -1,44 +1,25 @@
 import {
   createDrawerNavigator,
-  DrawerContentScrollView,
-  DrawerItem,
+  DrawerHeaderProps,
 } from '@react-navigation/drawer';
-import {routes, screens} from './RouteItems';
-import {Text} from 'react-native';
+import {screens} from './RouteItems';
 import React from 'react';
 import AppBottomTabNavigator from './AppBottomTabNavigator';
+import AppDrawer from '../containers/layout/AppDrawer';
+import AppHeader from '../containers/layout/AppHeader';
 
 const Drawer = createDrawerNavigator();
-
-const CustomDrawerContent = (props: any) => {
-  const currentRouteName = props.currentRoute?.name;
-  return (
-    <DrawerContentScrollView {...props}>
-      {routes
-        .filter(route => route.showInDrawer)
-        .map(route => {
-          const focusedRoute = routes.find(r => r.name === currentRouteName);
-          const focused = focusedRoute
-            ? route.name === focusedRoute?.focusedRoute
-            : route.name === screens.HomeStack;
-
-          return (
-            <DrawerItem
-              key={route.name}
-              label={() => <Text>{route.title}</Text>}
-              onPress={() => props.navigation.navigate(route.name)}
-            />
-          );
-        })}
-    </DrawerContentScrollView>
-  );
-};
 
 const AppDrawerNavigator = (props: any) => {
   return (
     <Drawer.Navigator
+      screenOptions={{
+        header: (headerProps: DrawerHeaderProps) => (
+          <AppHeader {...headerProps} />
+        ),
+      }}
       drawerContent={drawerProps => (
-        <CustomDrawerContent {...drawerProps} currentRoute={props.route} />
+        <AppDrawer {...drawerProps} currentRoute={props.route?.name} />
       )}>
       <Drawer.Screen
         name={screens.HomeTab}

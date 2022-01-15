@@ -6,7 +6,7 @@ import {
   getRefreshToken,
   logout,
   setAccessToken,
-} from './slices/auth';
+} from './store/slices/auth';
 // @ts-ignore
 import {API_URL} from '@env';
 

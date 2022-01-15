@@ -1,36 +1,21 @@
-import {routes, screens} from './RouteItems';
+import {screens} from './RouteItems';
 import React from 'react';
-import {View} from 'native-base';
 import {
-  BottomTabNavigationOptions,
+  BottomTabBarProps,
   createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs';
 import PortfolioStackNavigator from './app-navigators/PortfolioStackNavigator';
 import SubscriptionStackNavigator from './app-navigators/SubscriptionStackNavigator';
 import HomeStackNavigator from './app-navigators/HomeStackNavigator';
+import AppFooter from '../containers/layout/AppFooter';
 
 const Tab = createBottomTabNavigator();
 
-const tabOptions = (props: any): BottomTabNavigationOptions => {
-  const item = routes.find(routeItem => routeItem.name === props.route.name);
-
-  if (!item || !item.showInTab) {
-    return {
-      tabBarButton: () => <View style={{width: 0}} />,
-      headerShown: false,
-    };
-  }
-
-  return {
-    tabBarIcon: (tabBarProps: any) => item.icon(tabBarProps.focused),
-    tabBarLabel: () => null,
-    headerShown: false,
-  };
-};
-
 const BottomTabNavigator = () => {
   return (
-    <Tab.Navigator screenOptions={tabOptions}>
+    <Tab.Navigator
+      tabBar={(props: BottomTabBarProps) => <AppFooter {...props} />}
+      screenOptions={{headerShown: false}}>
       <Tab.Screen name={screens.HomeStack} component={HomeStackNavigator} />
       <Tab.Screen
         name={screens.PortfolioStack}

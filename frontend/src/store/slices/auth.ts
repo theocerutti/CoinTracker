@@ -1,6 +1,6 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import {RootState} from './index';
-import {AuthSliceState} from '../types/slices/auth';
+import {AuthSliceState} from '../../types/slices/auth';
 import * as SecureStore from 'expo-secure-store';
 
 const ACCESS_TOKEN_KEY = 'ACCESS_TOKEN';
@@ -13,15 +13,14 @@ export const initialState: AuthSliceState = {
 const authSlice = createSlice({
   name: 'auth',
   initialState,
-  reducers: {
-    extraReducers: builder => {
-      builder.addCase(setAccessToken.fulfilled, state => {
-        state.isLogged = true;
-      });
-      builder.addCase(logout.fulfilled, state => {
-        state.isLogged = false;
-      });
-    },
+  reducers: {},
+  extraReducers: builder => {
+    builder.addCase(setAccessToken.fulfilled, state => {
+      state.isLogged = true;
+    });
+    builder.addCase(logout.fulfilled, state => {
+      state.isLogged = false;
+    });
   },
 });
 

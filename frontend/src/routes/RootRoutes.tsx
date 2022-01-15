@@ -2,7 +2,7 @@ import React from 'react';
 import {Login} from '../pages/auth/Login';
 import {Register} from '../pages/auth/Register';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {authSelector} from '../slices/auth';
+import {authSelector} from '../store/slices/auth';
 import {useSelector} from 'react-redux';
 import AppRoutes from './AppRoutes';
 

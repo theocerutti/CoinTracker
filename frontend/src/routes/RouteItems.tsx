@@ -1,9 +1,14 @@
 import React, {ReactComponentElement} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import styled from 'styled-components/native';
+import {getTheme} from '../utils/theme';
 
-export type Screens = {
-  [key: string]: string;
-};
+const RouteIcon = styled(Icon)<{isFocused: boolean}>`
+  color: ${props =>
+    getTheme(props)[props.isFocused ? 'buttonPrimary' : 'buttonSecondary']};
+`;
+
+export type Screens = Record<string, string>;
 
 export type Route = {
   name: string;
@@ -27,9 +32,8 @@ export const screens: Screens = {
 
 const focusOptions = (focused: boolean) => {
   return {
-    size: focused ? 25 : 30,
-    color: focused ? '#000' : '#555',
-    [focused ? 'light' : 'solid']: true,
+    size: focused ? 30 : 25,
+    //[focused ? 'light' : 'solid']: true,
   };
 };
 
@@ -40,7 +44,9 @@ export const routes: Array<Route> = [
     title: 'Home',
     showInTab: false,
     showInDrawer: false,
-    icon: (focused: boolean) => <Icon name="home" {...focusOptions(focused)} />,
+    icon: (focused: boolean) => (
+      <RouteIcon isFocused={focused} name="home" {...focusOptions(focused)} />
+    ),
   },
 
   {
@@ -49,7 +55,9 @@ export const routes: Array<Route> = [
     title: 'Home',
     showInTab: true,
     showInDrawer: true,
-    icon: (focused: boolean) => <Icon name="home" {...focusOptions(focused)} />,
+    icon: (focused: boolean) => (
+      <RouteIcon isFocused={focused} name="home" {...focusOptions(focused)} />
+    ),
   },
   {
     name: screens.Home,
@@ -57,7 +65,9 @@ export const routes: Array<Route> = [
     title: 'Home',
     showInTab: true,
     showInDrawer: false,
-    icon: (focused: boolean) => <Icon name="home" {...focusOptions(focused)} />,
+    icon: (focused: boolean) => (
+      <RouteIcon isFocused={focused} name="home" {...focusOptions(focused)} />
+    ),
   },
   {
     name: screens.SubscriptionStack,
@@ -66,7 +76,12 @@ export const routes: Array<Route> = [
     showInTab: true,
     showInDrawer: true,
     icon: (focused: boolean) => (
-      <Icon name="star" solid {...focusOptions(focused)} />
+      <RouteIcon
+        isFocused={focused}
+        name="star"
+        solid
+        {...focusOptions(focused)}
+      />
     ),
   },
   {
@@ -76,7 +91,12 @@ export const routes: Array<Route> = [
     showInTab: true,
     showInDrawer: false,
     icon: (focused: boolean) => (
-      <Icon name="star" solid {...focusOptions(focused)} />
+      <RouteIcon
+        isFocused={focused}
+        name="star"
+        solid
+        {...focusOptions(focused)}
+      />
     ),
   },
   {
@@ -86,7 +106,7 @@ export const routes: Array<Route> = [
     showInTab: true,
     showInDrawer: true,
     icon: (focused: boolean) => (
-      <Icon name="wallet" {...focusOptions(focused)} />
+      <RouteIcon isFocused={focused} name="wallet" {...focusOptions(focused)} />
     ),
   },
   {
@@ -96,7 +116,7 @@ export const routes: Array<Route> = [
     showInTab: true,
     showInDrawer: false,
     icon: (focused: boolean) => (
-      <Icon name="wallet" {...focusOptions(focused)} />
+      <RouteIcon isFocused={focused} name="wallet" {...focusOptions(focused)} />
     ),
   },
 ];

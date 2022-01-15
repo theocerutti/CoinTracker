@@ -1,64 +1,60 @@
-import {Box, HStack, Icon, IconButton, StatusBar, Text} from 'native-base';
 import React from 'react';
-import {MaterialIcons} from '@expo/vector-icons';
+import {TouchableOpacity, View} from 'react-native';
+import {Text} from '../../components';
+import styled from 'styled-components/native';
+import {DrawerHeaderProps} from '@react-navigation/drawer';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import {spacing} from '../../theme';
+import {getThemePropSelector} from '../../utils/theme';
+import {useDispatch, useSelector} from 'react-redux';
+import {switchAutoTheme, themeSelector} from '../../store/slices/theme';
+import {appName} from '../../constants';
 
-const AppHeader = (props: any) => {
+const AppHeaderContainer = styled(View)`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: ${spacing.sp10};
+  background-color: ${getThemePropSelector('backgroundLevel3')};
+  width: 100%;
+  height: ${spacing.sp50};
+`;
+
+const DrawerIcon = styled(Icon)`
+  color: ${getThemePropSelector('buttonPrimary')};
+`;
+
+const ThemeSwitcherIcon = styled(Icon)`
+  color: ${getThemePropSelector('buttonPrimary')};
+`;
+
+const AppHeader = (props: DrawerHeaderProps) => {
+  const dispatch = useDispatch();
+  const {themeType} = useSelector(themeSelector);
+
+  const onPressDrawer = () => {
+    props.navigation.toggleDrawer();
+  };
+
+  const onPressTheme = () => {
+    dispatch(switchAutoTheme());
+  };
+
   return (
-    <>
-      <StatusBar backgroundColor="#3700B3" barStyle="light-content" />
-      <Box safeAreaTop backgroundColor="#6200ee" />
-      <HStack
-        bg="#6200ee"
-        px="1"
-        py="3"
-        justifyContent="space-between"
-        alignItems="center">
-        <HStack space="4" alignItems="center">
-          <IconButton
-            onPress={() => props.navigation.openDrawer()}
-            icon={
-              <Icon
-                size="sm"
-                as={<MaterialIcons name="menu" />}
-                color="white"
-              />
-            }
-          />
-          <Text color="white" fontSize="20" fontWeight="bold">
-            Home
-          </Text>
-        </HStack>
-        <HStack space="2">
-          <IconButton
-            icon={
-              <Icon
-                as={<MaterialIcons name="favorite" />}
-                size="sm"
-                color="white"
-              />
-            }
-          />
-          <IconButton
-            icon={
-              <Icon
-                as={<MaterialIcons name="search" />}
-                color="white"
-                size="sm"
-              />
-            }
-          />
-          <IconButton
-            icon={
-              <Icon
-                as={<MaterialIcons name="more-vert" />}
-                size="sm"
-                color="white"
-              />
-            }
-          />
-        </HStack>
-      </HStack>
-    </>
+    <AppHeaderContainer>
+      <TouchableOpacity onPress={onPressDrawer}>
+        <DrawerIcon name="bars" size={25} />
+      </TouchableOpacity>
+      <Text>{appName}</Text>
+      <TouchableOpacity onPress={onPressTheme}>
+        <ThemeSwitcherIcon
+          name={themeType === 'dark' ? 'sun' : 'moon'}
+          solid
+          size={25}
+        />
+      </TouchableOpacity>
+    </AppHeaderContainer>
   );
 };
 
