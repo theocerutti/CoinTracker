@@ -9,6 +9,7 @@ import {getThemePropSelector} from '../../utils/theme';
 import {useDispatch, useSelector} from 'react-redux';
 import {switchAutoTheme, themeSelector} from '../../store/slices/theme';
 import {appName} from '../../constants';
+import {switchAutoCurrency} from '../../store/slices/settings';
 
 const AppHeaderContainer = styled(View)`
   display: flex;
@@ -21,12 +22,13 @@ const AppHeaderContainer = styled(View)`
   height: ${spacing.sp50};
 `;
 
-const DrawerIcon = styled(Icon)`
+const ActionIcon = styled(Icon)`
   color: ${getThemePropSelector('buttonPrimary')};
 `;
 
-const ThemeSwitcherIcon = styled(Icon)`
-  color: ${getThemePropSelector('buttonPrimary')};
+const ActionButtons = styled(View)`
+  display: flex;
+  flex-direction: row;
 `;
 
 const AppHeader = (props: DrawerHeaderProps) => {
@@ -41,19 +43,28 @@ const AppHeader = (props: DrawerHeaderProps) => {
     dispatch(switchAutoTheme());
   };
 
+  const onPressCurrency = () => {
+    dispatch(switchAutoCurrency());
+  };
+
   return (
     <AppHeaderContainer>
       <TouchableOpacity onPress={onPressDrawer}>
-        <DrawerIcon name="bars" size={25} />
+        <ActionIcon name="bars" size={25} />
       </TouchableOpacity>
       <Text>{appName}</Text>
-      <TouchableOpacity onPress={onPressTheme}>
-        <ThemeSwitcherIcon
-          name={themeType === 'dark' ? 'sun' : 'moon'}
-          solid
-          size={25}
-        />
-      </TouchableOpacity>
+      <ActionButtons>
+        <TouchableOpacity onPress={onPressCurrency}>
+          <ActionIcon name="btc" size={25} />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={onPressTheme}>
+          <ActionIcon
+            name={themeType === 'dark' ? 'sun' : 'moon'}
+            solid
+            size={25}
+          />
+        </TouchableOpacity>
+      </ActionButtons>
     </AppHeaderContainer>
   );
 };
