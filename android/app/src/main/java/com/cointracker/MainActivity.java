@@ -1,4 +1,4 @@
-package com.cointrackerfrontend;
+package com.cointracker;
 import expo.modules.ReactActivityDelegateWrapper;
 import com.facebook.react.ReactActivityDelegate;
 
@@ -13,7 +13,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "cointrackerfrontend";
+    return "cointracker";
   }
 
   @Override

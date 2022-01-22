@@ -5,6 +5,6 @@ import 'react-native-gesture-handler';
 import {AppRegistry} from 'react-native';
 import RootApp from './src/App';
 
-const APP_KEY = 'cointrackerfrontend';
+const APP_KEY = 'cointracker';
 
 AppRegistry.registerComponent(APP_KEY, () => RootApp);

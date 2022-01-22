@@ -4,7 +4,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '12.0'
 
-target 'cointrackerfrontend' do
+target 'cointracker' do
   use_expo_modules!
   post_integrate do |installer|
     expo_patch_react_imports!(installer)
@@ -19,7 +19,7 @@ target 'cointrackerfrontend' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
-  target 'cointrackerfrontendTests' doDONT_AUTOINSTALL_REANIMATED
+  target 'cointrackerTests' doDONT_AUTOINSTALL_REANIMATED
     inherit! :complete
     # Pods for testing
   end

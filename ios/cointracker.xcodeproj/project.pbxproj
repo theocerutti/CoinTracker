@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* cointrackerfrontendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* cointrackerfrontendTests.m */; };
+		00E356F31AD99517003FC87E /* cointrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* cointrackerTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2FB1C3F53876132898975294 /* libPods-cointrackerfrontend-cointrackerfrontendTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 168C86462FD814DED68C8213 /* libPods-cointrackerfrontend-cointrackerfrontendTests.a */; };
-		3580A49C5116C7D5742852A4 /* libPods-cointrackerfrontend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1F7BF6D8148A2B1A6A5C96 /* libPods-cointrackerfrontend.a */; };
+		2FB1C3F53876132898975294 /* libPods-cointracker-cointrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 168C86462FD814DED68C8213 /* libPods-cointracker-cointrackerTests.a */; };
+		3580A49C5116C7D5742852A4 /* libPods-cointracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1F7BF6D8148A2B1A6A5C96 /* libPods-cointracker.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8CE0BC97A0834E128438454C /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E18248F14EC44D691BDA909 /* Roboto-Black.ttf */; };
 		3C0ABA9076F345EFA555ADA0 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E550D42A9C448EB133E760 /* Roboto-BlackItalic.ttf */; };
@@ -50,27 +50,27 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = cointrackerfrontend;
+			remoteInfo = cointracker;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* cointrackerfrontendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cointrackerfrontendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* cointrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cointrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* cointrackerfrontendTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cointrackerfrontendTests.m; sourceTree = "<group>"; };
-		0796AC3C3FBD69334FF433C1 /* Pods-cointrackerfrontend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cointrackerfrontend.debug.xcconfig"; path = "Target Support Files/Pods-cointrackerfrontend/Pods-cointrackerfrontend.debug.xcconfig"; sourceTree = "<group>"; };
-		0814C16C271202C703AC8C7D /* Pods-cointrackerfrontend-cointrackerfrontendTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cointrackerfrontend-cointrackerfrontendTests.debug.xcconfig"; path = "Target Support Files/Pods-cointrackerfrontend-cointrackerfrontendTests/Pods-cointrackerfrontend-cointrackerfrontendTests.debug.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* cointrackerfrontend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cointrackerfrontend.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = cointrackerfrontend/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = cointrackerfrontend/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = cointrackerfrontend/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = cointrackerfrontend/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = cointrackerfrontend/main.m; sourceTree = "<group>"; };
-		168C86462FD814DED68C8213 /* libPods-cointrackerfrontend-cointrackerfrontendTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cointrackerfrontend-cointrackerfrontendTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = cointrackerfrontend/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CF1838D1B944ED97C157BFEF /* Pods-cointrackerfrontend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cointrackerfrontend.release.xcconfig"; path = "Target Support Files/Pods-cointrackerfrontend/Pods-cointrackerfrontend.release.xcconfig"; sourceTree = "<group>"; };
-		D7EBF99EF9357641ACCBEDA2 /* Pods-cointrackerfrontend-cointrackerfrontendTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cointrackerfrontend-cointrackerfrontendTests.release.xcconfig"; path = "Target Support Files/Pods-cointrackerfrontend-cointrackerfrontendTests/Pods-cointrackerfrontend-cointrackerfrontendTests.release.xcconfig"; sourceTree = "<group>"; };
-		EC1F7BF6D8148A2B1A6A5C96 /* libPods-cointrackerfrontend.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cointrackerfrontend.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F21AD99517003FC87E /* cointrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cointrackerTests.m; sourceTree = "<group>"; };
+		0796AC3C3FBD69334FF433C1 /* Pods-cointracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cointracker.debug.xcconfig"; path = "Target Support Files/Pods-cointracker/Pods-cointracker.debug.xcconfig"; sourceTree = "<group>"; };
+		0814C16C271202C703AC8C7D /* Pods-cointracker-cointrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cointracker-cointrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-cointracker-cointrackerTests/Pods-cointracker-cointrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* cointracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cointracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = cointracker/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = cointracker/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = cointracker/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = cointracker/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = cointracker/main.m; sourceTree = "<group>"; };
+		168C86462FD814DED68C8213 /* libPods-cointracker-cointrackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cointracker-cointrackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = cointracker/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF1838D1B944ED97C157BFEF /* Pods-cointracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cointracker.release.xcconfig"; path = "Target Support Files/Pods-cointracker/Pods-cointracker.release.xcconfig"; sourceTree = "<group>"; };
+		D7EBF99EF9357641ACCBEDA2 /* Pods-cointracker-cointrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cointracker-cointrackerTests.release.xcconfig"; path = "Target Support Files/Pods-cointracker-cointrackerTests/Pods-cointracker-cointrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC1F7BF6D8148A2B1A6A5C96 /* libPods-cointracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cointracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		9E18248F14EC44D691BDA909 /* Roboto-Black.ttf */ = {isa = PBXFileReference; name = "Roboto-Black.ttf"; path = "../src/assets/fonts/Roboto-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		93E550D42A9C448EB133E760 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-BlackItalic.ttf"; path = "../src/assets/fonts/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
@@ -107,7 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FB1C3F53876132898975294 /* libPods-cointrackerfrontend-cointrackerfrontendTests.a in Frameworks */,
+				2FB1C3F53876132898975294 /* libPods-cointracker-cointrackerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,20 +115,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3580A49C5116C7D5742852A4 /* libPods-cointrackerfrontend.a in Frameworks */,
+				3580A49C5116C7D5742852A4 /* libPods-cointracker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* cointrackerfrontendTests */ = {
+		00E356EF1AD99517003FC87E /* cointrackerTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* cointrackerfrontendTests.m */,
+				00E356F21AD99517003FC87E /* cointrackerTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = cointrackerfrontendTests;
+			path = cointrackerTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -139,7 +139,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* cointrackerfrontend */ = {
+		13B07FAE1A68108700A75B9A /* cointracker */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -149,15 +149,15 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = cointrackerfrontend;
+			name = cointracker;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				EC1F7BF6D8148A2B1A6A5C96 /* libPods-cointrackerfrontend.a */,
-				168C86462FD814DED68C8213 /* libPods-cointrackerfrontend-cointrackerfrontendTests.a */,
+				EC1F7BF6D8148A2B1A6A5C96 /* libPods-cointracker.a */,
+				168C86462FD814DED68C8213 /* libPods-cointracker-cointrackerTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -172,9 +172,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* cointrackerfrontend */,
+				13B07FAE1A68108700A75B9A /* cointracker */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* cointrackerfrontendTests */,
+				00E356EF1AD99517003FC87E /* cointrackerTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				A9E76BDA8A994D9A2AD58B01 /* Pods */,
@@ -188,8 +188,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* cointrackerfrontend.app */,
-				00E356EE1AD99517003FC87E /* cointrackerfrontendTests.xctest */,
+				13B07F961A680F5B00A75B9A /* cointracker.app */,
+				00E356EE1AD99517003FC87E /* cointrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,10 +197,10 @@
 		A9E76BDA8A994D9A2AD58B01 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0796AC3C3FBD69334FF433C1 /* Pods-cointrackerfrontend.debug.xcconfig */,
-				CF1838D1B944ED97C157BFEF /* Pods-cointrackerfrontend.release.xcconfig */,
-				0814C16C271202C703AC8C7D /* Pods-cointrackerfrontend-cointrackerfrontendTests.debug.xcconfig */,
-				D7EBF99EF9357641ACCBEDA2 /* Pods-cointrackerfrontend-cointrackerfrontendTests.release.xcconfig */,
+				0796AC3C3FBD69334FF433C1 /* Pods-cointracker.debug.xcconfig */,
+				CF1838D1B944ED97C157BFEF /* Pods-cointracker.release.xcconfig */,
+				0814C16C271202C703AC8C7D /* Pods-cointracker-cointrackerTests.debug.xcconfig */,
+				D7EBF99EF9357641ACCBEDA2 /* Pods-cointracker-cointrackerTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -245,9 +245,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* cointrackerfrontendTests */ = {
+		00E356ED1AD99517003FC87E /* cointrackerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "cointrackerfrontendTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "cointrackerTests" */;
 			buildPhases = (
 				A54F4BDD3BE8EDD0AE2023A0 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -261,14 +261,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = cointrackerfrontendTests;
-			productName = cointrackerfrontendTests;
-			productReference = 00E356EE1AD99517003FC87E /* cointrackerfrontendTests.xctest */;
+			name = cointrackerTests;
+			productName = cointrackerTests;
+			productReference = 00E356EE1AD99517003FC87E /* cointrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* cointrackerfrontend */ = {
+		13B07F861A680F5B00A75B9A /* cointracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "cointrackerfrontend" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "cointracker" */;
 			buildPhases = (
 				3985A553963DEE5FE11EB332 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -283,9 +283,9 @@
 			);
 			dependencies = (
 			);
-			name = cointrackerfrontend;
-			productName = cointrackerfrontend;
-			productReference = 13B07F961A680F5B00A75B9A /* cointrackerfrontend.app */;
+			name = cointracker;
+			productName = cointracker;
+			productReference = 13B07F961A680F5B00A75B9A /* cointracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -305,7 +305,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "cointrackerfrontend" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "cointracker" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -318,8 +318,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* cointrackerfrontend */,
-				00E356ED1AD99517003FC87E /* cointrackerfrontendTests */,
+				13B07F861A680F5B00A75B9A /* cointracker */,
+				00E356ED1AD99517003FC87E /* cointrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -392,15 +392,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-cointrackerfrontend-cointrackerfrontendTests/Pods-cointrackerfrontend-cointrackerfrontendTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-cointracker-cointrackerTests/Pods-cointracker-cointrackerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-cointrackerfrontend-cointrackerfrontendTests/Pods-cointrackerfrontend-cointrackerfrontendTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-cointracker-cointrackerTests/Pods-cointracker-cointrackerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cointrackerfrontend-cointrackerfrontendTests/Pods-cointrackerfrontend-cointrackerfrontendTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cointracker-cointrackerTests/Pods-cointracker-cointrackerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3880D97E7B8FFAC5F24D314E /* [CP] Copy Pods Resources */ = {
@@ -409,15 +409,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-cointrackerfrontend/Pods-cointrackerfrontend-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-cointracker/Pods-cointracker-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-cointrackerfrontend/Pods-cointrackerfrontend-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-cointracker/Pods-cointracker-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cointrackerfrontend/Pods-cointrackerfrontend-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cointracker/Pods-cointracker-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3985A553963DEE5FE11EB332 /* [CP] Check Pods Manifest.lock */ = {
@@ -435,7 +435,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-cointrackerfrontend-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-cointracker-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -448,15 +448,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-cointrackerfrontend/Pods-cointrackerfrontend-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-cointracker/Pods-cointracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-cointrackerfrontend/Pods-cointrackerfrontend-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-cointracker/Pods-cointracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cointrackerfrontend/Pods-cointrackerfrontend-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cointracker/Pods-cointracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A54F4BDD3BE8EDD0AE2023A0 /* [CP] Check Pods Manifest.lock */ = {
@@ -474,7 +474,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-cointrackerfrontend-cointrackerfrontendTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-cointracker-cointrackerTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -487,15 +487,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-cointrackerfrontend-cointrackerfrontendTests/Pods-cointrackerfrontend-cointrackerfrontendTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-cointracker-cointrackerTests/Pods-cointracker-cointrackerTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-cointrackerfrontend-cointrackerfrontendTests/Pods-cointrackerfrontend-cointrackerfrontendTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-cointracker-cointrackerTests/Pods-cointracker-cointrackerTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cointrackerfrontend-cointrackerfrontendTests/Pods-cointrackerfrontend-cointrackerfrontendTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cointracker-cointrackerTests/Pods-cointracker-cointrackerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -524,7 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* cointrackerfrontendTests.m in Sources */,
+				00E356F31AD99517003FC87E /* cointrackerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,7 +542,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* cointrackerfrontend */;
+			target = 13B07F861A680F5B00A75B9A /* cointracker */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -550,14 +550,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0814C16C271202C703AC8C7D /* Pods-cointrackerfrontend-cointrackerfrontendTests.debug.xcconfig */;
+			baseConfigurationReference = 0814C16C271202C703AC8C7D /* Pods-cointracker-cointrackerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = cointrackerfrontendTests/Info.plist;
+				INFOPLIST_FILE = cointrackerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -571,17 +571,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cointrackerfrontend.app/cointrackerfrontend";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cointracker.app/cointracker";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7EBF99EF9357641ACCBEDA2 /* Pods-cointrackerfrontend-cointrackerfrontendTests.release.xcconfig */;
+			baseConfigurationReference = D7EBF99EF9357641ACCBEDA2 /* Pods-cointracker-cointrackerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = cointrackerfrontendTests/Info.plist;
+				INFOPLIST_FILE = cointrackerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -595,19 +595,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cointrackerfrontend.app/cointrackerfrontend";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cointracker.app/cointracker";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0796AC3C3FBD69334FF433C1 /* Pods-cointrackerfrontend.debug.xcconfig */;
+			baseConfigurationReference = 0796AC3C3FBD69334FF433C1 /* Pods-cointracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = cointrackerfrontend/Info.plist;
+				INFOPLIST_FILE = cointracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -618,7 +618,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = cointrackerfrontend;
+				PRODUCT_NAME = cointracker;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -627,12 +627,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF1838D1B944ED97C157BFEF /* Pods-cointrackerfrontend.release.xcconfig */;
+			baseConfigurationReference = CF1838D1B944ED97C157BFEF /* Pods-cointracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = cointrackerfrontend/Info.plist;
+				INFOPLIST_FILE = cointracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -643,7 +643,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = cointrackerfrontend;
+				PRODUCT_NAME = cointracker;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -775,7 +775,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "cointrackerfrontendTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "cointrackerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -784,7 +784,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "cointrackerfrontend" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "cointracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -793,7 +793,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "cointrackerfrontend" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "cointracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
