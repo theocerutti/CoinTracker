@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Provider, useSelector} from 'react-redux';
 import {store} from './store/store';
 import MainContainer from './containers/MainContainer';
@@ -9,21 +9,12 @@ import RootRoutes from './routes/RootRoutes';
 import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
 import {ThemeProvider} from 'styled-components/native';
 import {QueryClient, QueryClientProvider} from 'react-query';
-import Coinbase from './exchanges/Coinbase';
-import ccxt from 'ccxt';
+import {useDispatch} from 'react-redux';
+import {loadAppConfig} from './store/slices/appConfig';
 import {Cashify} from 'cashify';
 import {cashifyRates} from './types/cashify';
 
-export const coinbase = new Coinbase({
-  apiKey: '9nXxZtkhQinEA6fe',
-  secret: 'CRbgFPeqqO5fnfigPceyXRSVlKGsAwra',
-  timeout: 30000,
-  enableRateLimit: true,
-});
-
 export const cashify = new Cashify({base: 'USD', rates: cashifyRates});
-
-export const globalExchange = new ccxt.binance();
 
 const RootApp = () => (
   <Provider store={store}>
@@ -32,6 +23,7 @@ const RootApp = () => (
 );
 
 const App = () => {
+  const dispatch = useDispatch();
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -41,6 +33,10 @@ const App = () => {
     },
   });
   const {theme, themeType} = useSelector(themeSelector);
+
+  useEffect(() => {
+    dispatch(loadAppConfig());
+  }, [dispatch]);
 
   return (
     <Provider store={store}>

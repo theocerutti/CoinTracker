@@ -2,7 +2,7 @@ import React from 'react';
 import {Asset} from '../types/exchanges';
 import {View} from 'react-native';
 import ccxt from 'ccxt';
-import {formatPrice} from '../utils/convertPrice';
+import {useFormatPrice} from '../utils/convertPrice';
 import styled from 'styled-components/native';
 import {Text} from './Text';
 import {spacing} from '../theme';
@@ -29,11 +29,11 @@ const Assets = ({
           {asset.code} {asset.name}
         </Text>
         <Text variant="textSecondary">
-          {asset.amount} | {formatPrice(ticker?.info.lastPrice)}
+          {asset.amount} | {useFormatPrice(ticker?.info.lastPrice)}
         </Text>
       </View>
       <View>
-        <Text>{formatPrice(ticker?.info.lastPrice * asset.amount)}</Text>
+        <Text>{useFormatPrice(ticker?.info.lastPrice * asset.amount)}</Text>
       </View>
     </AssetContainer>
   );

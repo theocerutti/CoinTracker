@@ -1,4 +1,3 @@
-import {cashify} from '../App';
 import currency from 'currency.js';
 import {
   CURRENCY_DECIMAL_PRECISION,
@@ -7,8 +6,10 @@ import {
 import {settingsSelector} from '../store/slices/settings';
 import {useSelector} from 'react-redux';
 import {cashifySymbol} from '../types/cashify';
+import {appConfigSelector} from '../store/slices/appConfig';
 
-export function convertPrice(price: number): number {
+export function useConvertPrice(price: number): number {
+  const {cashify} = useSelector(appConfigSelector);
   const displayedCurrency = useSelector(settingsSelector).currency;
 
   return cashify.convert(price, {
@@ -17,10 +18,10 @@ export function convertPrice(price: number): number {
   });
 }
 
-export function formatPrice(price: number): string {
+export function useFormatPrice(price: number): string {
   const displayedCurrency = useSelector(settingsSelector).currency;
 
-  return currency(convertPrice(price), {
+  return currency(useConvertPrice(price), {
     symbol: cashifySymbol[displayedCurrency],
     precision: CURRENCY_DECIMAL_PRECISION,
   }).format();

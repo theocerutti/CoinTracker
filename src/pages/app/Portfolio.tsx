@@ -6,14 +6,16 @@ import {
   REFETCH_PORTFOLIO_ASSETS,
 } from '../../constants';
 import {Asset, Text} from '../../components';
-import {coinbase, globalExchange} from '../../App';
 import {Spinner} from '../../components/Spinner';
 import {ScrollView} from 'react-native-gesture-handler';
+import {appConfigSelector} from '../../store/slices/appConfig';
+import {useSelector} from 'react-redux';
 
 const Portfolio = (props: any) => {
+  const {currentExchange, globalExchange} = useSelector(appConfigSelector);
   const queryAssets = useQuery(
     'assets',
-    async () => await coinbase.getMyAssets(),
+    async () => await currentExchange?.getMyAssets(),
     {
       refetchInterval: REFETCH_PORTFOLIO_ASSETS,
     },
