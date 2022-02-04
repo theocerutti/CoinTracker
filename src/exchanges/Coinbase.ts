@@ -1,5 +1,6 @@
 import {BaseExchange} from './BaseExchange';
-import {Asset, ExchangeConstructConfig} from '../types/exchanges';
+import {Asset, ExchangeConstructConfig, Transaction} from '../types/exchanges';
+import {User} from '../types/exchanges/user';
 
 class Coinbase extends BaseExchange {
   constructor(config?: ExchangeConstructConfig) {
@@ -34,6 +35,18 @@ class Coinbase extends BaseExchange {
   async getMyAssets(): Promise<Array<Asset>> {
     const assets = await this.getAssets();
     return assets.filter(a => a.amount !== 0.0);
+  }
+
+  async getUser(): Promise<User> {
+    console.log("getUser")
+    return this.exchange.fetch2("user");
+  }
+
+  async getMyTransactions(): Promise<Array<Transaction>> {
+    console.log(await this.getUser());
+    const c = this.exchange.fetch("https://api.coinbase.com/v2/accounts/:account_id/transactions");
+    console.log(c);
+    return ["e"];
   }
 }
 

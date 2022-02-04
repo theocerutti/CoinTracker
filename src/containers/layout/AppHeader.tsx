@@ -17,7 +17,7 @@ const AppHeaderContainer = styled(View)`
   flex-direction: row;
   justify-content: space-between;
   padding: ${spacing.sp10};
-  background-color: ${getThemePropSelector('backgroundLevel3')};
+  background-color: ${getThemePropSelector('backgroundLevel4')};
   width: 100%;
   height: ${spacing.sp50};
 `;

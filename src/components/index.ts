@@ -1,4 +1,6 @@
 import {Text} from './Text';
-import Asset from './Assets';
+import {Asset} from './Asset';
+import {Spinner} from './Spinner';
+import {Separator} from './Separator';
 
-export {Text, Asset};
+export {Text, Asset, Separator, Spinner};

@@ -1,5 +1,5 @@
 import {Stack} from '../RootRoutes';
-import Home from '../../pages/app/Home';
+import Home from '../../containers/app/Home';
 import React from 'react';
 import {screens} from '../RouteItems';
 

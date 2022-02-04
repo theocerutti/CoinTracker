@@ -23,7 +23,9 @@ export const coinbase = new Coinbase({
 
 export const cashify = new Cashify({base: 'USD', rates: cashifyRates});
 
-export const globalExchange = new ccxt.binance();
+export const globalExchange = new ccxt.binance({
+  enableRateLimit: true,
+});
 
 const RootApp = () => (
   <Provider store={store}>
@@ -53,8 +55,8 @@ const App = () => {
                 colors: {
                   ...DefaultTheme.colors,
                   primary: theme.backgroundLevel1,
-                  background: theme.backgroundLevel2,
-                  card: theme.backgroundLevel3,
+                  background: theme.backgroundLevel3,
+                  card: theme.backgroundLevel4,
                   text: theme.textPrimary,
                   border: theme.border,
                   notification: theme.infoPrimary,

@@ -1,6 +1,6 @@
 import {Stack} from '../RootRoutes';
 import React from 'react';
-import Subscription from '../../pages/app/Subscription';
+import Subscription from '../../containers/app/Subscription';
 import {screens} from '../RouteItems';
 
 const SubscriptionStackNavigator = () => {
