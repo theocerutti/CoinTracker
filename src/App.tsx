@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {Provider, useSelector} from 'react-redux';
+import {Provider, useDispatch, useSelector} from 'react-redux';
 import {store} from './store/store';
 import MainContainer from './containers/MainContainer';
 import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
@@ -9,12 +9,7 @@ import RootRoutes from './routes/RootRoutes';
 import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
 import {ThemeProvider} from 'styled-components/native';
 import {QueryClient, QueryClientProvider} from 'react-query';
-import {useDispatch} from 'react-redux';
 import {loadAppConfig} from './store/slices/appConfig';
-import {Cashify} from 'cashify';
-import {cashifyRates} from './types/cashify';
-
-export const cashify = new Cashify({base: 'USD', rates: cashifyRates});
 
 const RootApp = () => (
   <Provider store={store}>
@@ -49,8 +44,8 @@ const App = () => {
                 colors: {
                   ...DefaultTheme.colors,
                   primary: theme.backgroundLevel1,
-                  background: theme.backgroundLevel2,
-                  card: theme.backgroundLevel3,
+                  background: theme.backgroundLevel3,
+                  card: theme.backgroundLevel4,
                   text: theme.textPrimary,
                   border: theme.border,
                   notification: theme.infoPrimary,

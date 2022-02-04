@@ -1,4 +1,5 @@
-import {Currency} from './types/exchanges/currency';
+import {Currency} from './types/exchanges';
+import {ExchangeId} from 'ccxt';
 
 export const appName: string = 'Coin Tracker';
 
@@ -10,3 +11,7 @@ export const DEFAULT_CURRENCY_TICKER_EXCHANGE: Currency = 'USDT';
 export const DEFAULT_CURRENCY_CONVERT: Currency = 'USD';
 export const DEFAULT_DISPLAYED_CURRENCY: Currency = 'USD';
 export const CURRENCY_DECIMAL_PRECISION: number = 3;
+
+export const CRYPTO_ICONS_URL = "https://cryptoicon-api.vercel.app/api/icon"
+
+export const SUPPORTED_EXCHANGES: Array<ExchangeId> = ['coinbase', 'binance'];

@@ -1,6 +1,6 @@
 import {Stack} from '../RootRoutes';
 import React from 'react';
-import Portfolio from '../../pages/app/Portfolio';
+import Portfolio from '../../containers/app/Portfolio';
 import {screens} from '../RouteItems';
 
 const PortfolioStackNavigator = () => {

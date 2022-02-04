@@ -13,7 +13,7 @@ const AppFooterContainer = styled(View)`
   margin: auto;
   height: ${spacing.sp50};
   flex-direction: row;
-  background-color: ${getThemePropSelector('backgroundLevel3')}
+  background-color: ${getThemePropSelector('backgroundLevel4')}
   width: 100%;
 `;
 

@@ -35,6 +35,8 @@ export type FontSize = {
   base: string;
   large: string;
   larger: string;
+  big: string;
+  bigger: string;
   huge: string;
   massive: string;
 };

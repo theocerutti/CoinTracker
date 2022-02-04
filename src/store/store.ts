@@ -7,7 +7,10 @@ const store = configureStore({
     getDefaultMiddleware({
       serializableCheck: {
         // Ignore these action types
-        ignoredActions: ['appConfig/loadAppConfig'],
+        ignoredActions: [
+          'appConfig/loadAppConfig',
+          'appConfig/setCurrentExchange',
+        ],
         // Ignore these field paths in all actions
         ignoredActionPaths: [],
         // Ignore these paths in the state

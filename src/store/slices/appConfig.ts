@@ -1,21 +1,25 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {RootState} from './index';
 import {AppConfigState} from '../../types/slices/appConfig';
-import Coinbase from '../../exchanges/Coinbase';
 import {Cashify} from 'cashify';
 import {cashifyRates} from '../../types/cashify';
 import ccxt from 'ccxt';
+import {BaseExchange} from '../../exchanges/BaseExchange';
+import {Coinbase} from '../../exchanges';
 
 export const initialState: AppConfigState = {
   cashify: new Cashify({base: 'USD', rates: cashifyRates}),
   globalExchange: new ccxt.binance(),
-  currentExchange: new Coinbase(),
+  currentExchange: null,
 };
 
 const appConfigSlice = createSlice({
   name: 'appConfig',
   initialState,
   reducers: {
+    setCurrentExchange: (state, {payload}: {payload: BaseExchange}) => {
+      state.currentExchange = payload;
+    },
     loadAppConfig: state => {
       state.cashify = new Cashify({base: 'USD', rates: cashifyRates});
       state.currentExchange = new Coinbase({
@@ -24,12 +28,14 @@ const appConfigSlice = createSlice({
         timeout: 30000,
         enableRateLimit: true,
       });
-      state.globalExchange = new ccxt.binance();
+      state.globalExchange = new ccxt.binance({
+        enableRateLimit: true,
+      });
     },
   },
 });
 
-export const {loadAppConfig} = appConfigSlice.actions;
+export const {loadAppConfig, setCurrentExchange} = appConfigSlice.actions;
 
 export const appConfigSelector = (state: RootState) => state.appConfig;
 export default appConfigSlice.reducer;

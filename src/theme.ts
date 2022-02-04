@@ -53,8 +53,10 @@ export const fontSize: FontSize = {
   base: '14px',
   large: '16px',
   larger: '20px',
-  huge: '22px',
-  massive: '24px',
+  big: '24px',
+  bigger: '30px',
+  huge: '40px',
+  massive: '60px',
 };
 
 export const fontWeight: FontWeight = {
